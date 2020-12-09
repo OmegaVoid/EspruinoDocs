@@ -59,7 +59,8 @@ Arwes.prototype.C = {
 
 function drawCorner(obj, x, y, n) {
   g.setColor(obj.C.color.primary.base);
-  let s1, s2 = 1;
+  let s1 = 1
+  let s2 = 1;
   switch (n) {
     case 0: // Top Left
       s1 = s2 = -1;
