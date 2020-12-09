@@ -73,18 +73,16 @@ function drawCorner(obj, x, y, n) {
     case 3: // Bottom
       break;
   }
-  const x1 = x + obj.cornerOffset *s1;
-  const y1 = y + obj.cornerOffset *s2;
-  g.fillRect(x1, y1, x, y - obj.cornerSize*(s1*-1) + obj.cornerOffset*s1);
-  g.fillRect(x1, y1, x - obj.cornerSize*(s2*-1) + obj.cornerOffset*s2, y);
-  g.setColor("#000000");
+  const x1 = x + obj.cornerOffset * s1;
+  const y1 = y + obj.cornerOffset * s2;
+  g.fillRect(x1, y1, x - obj.cornerSize*s1 + obj.cornerOffset*s1, y);
+  g.fillRect(x1, y1, x, y - obj.cornerSize*s2 + obj.cornerOffset*s2);
+
 }
 
 Arwes.prototype.drawFrameNoCorners = function (x1, y1, x2, y2) {
   g.setColor(this.C.color.primary.dark);
   g.drawRect(x1, y1, x2, y2);
-  g.setColor("#000000");
-  g.fillRect(x1 + 1, y1 + 1, x2 - 1, y2 - 1);
 }
 
 Arwes.prototype.drawFrame = function (x1, y1, x2, y2) {
