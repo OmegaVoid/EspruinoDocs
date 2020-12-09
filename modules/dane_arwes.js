@@ -84,6 +84,7 @@ Arwes.prototype.drawFrameNoCorners = function (x1, y1, x2, y2) {
   g.setColor(this.C.color.primary.dark);
   g.drawRect(x1, y1, x2, y2);
   g.setColor("#000000");
+  g.fillRect(x1 + 1, y1 + 1, x2 - 1, y2 - 1);
 }
 
 Arwes.prototype.drawFrame = function (x1, y1, x2, y2) {
